@@ -8,12 +8,11 @@ from selenium.webdriver.common.by import By
 from selenium.common import NoSuchElementException
 from src.facebook_autoregister.functions.confirm_handler import OnlineSimData
 from selenium.webdriver.support.select import Select
-from config.config import tokens
+from config import config
 
-
-api_key_os: str = tokens["api_key_os"]
-api_token_gl: str = tokens["api_token_gl"]
-profile_id: str = tokens["profile_id"]
+api_key_os: str = config["TOKENS"]["api_key_os"]
+api_token_gl: str = config["TOKENS"]["api_token_gl"]
+profile_id: str = config["TOKENS"]["profile_id"]
 ROOT_DIR: str = os.path.dirname(os.path.abspath(__file__))
 chromedriver_path: str = ROOT_DIR + '/chromedriver'
 

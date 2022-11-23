@@ -1,5 +1,5 @@
 from src.facebook_autoregister.database.mysql_db import MySQLDB
-from src.facebook_autoregister.config.mysql_config import mysql122, mysql52
+from tmp.mysql_config import mysql122, mysql52
 
 mysql_instance_52 = MySQLDB()
 mysql_instance_52.create_connection(mysql52)

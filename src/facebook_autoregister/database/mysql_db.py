@@ -15,7 +15,7 @@ class MySQLDB(DatabaseInterface, ABC):
 
     def create_connection(self, db_config):
         try:
-            self.mysql_connector = pymysql.connect(**db_config)
+            self.mysql_connector = pymysql.connect(**db_config, cursorclass=pymysql.cursors.SSCursor)
             return self.mysql_connector
         except pymysql.err.OperationalError as e:
             if self.CONSOLE:

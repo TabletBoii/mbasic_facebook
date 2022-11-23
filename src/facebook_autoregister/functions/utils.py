@@ -10,14 +10,15 @@ from mimesis import Person
 from datetime import datetime
 from random import uniform, randint
 from src.facebook_autoregister.database.mysql_db import MySQLDB
-from src.facebook_autoregister.config.mysql_config import mysql52
+from src.facebook_autoregister.config import config
 from mimesis.enums import Gender, Locale
 from gologin import GoLogin, getRandomPort
 from seleniumwire.webdriver import ChromeOptions, Chrome
 
 
 db_instance_52 = MySQLDB()
-db_instance_52.create_connection(mysql52)
+print(config["DATABASES"]["MYSQL"]["MYSQL.52"])
+db_instance_52.create_connection(config["DATABASES"]["MYSQL"]["MYSQL.52"])
 
 
 class Utilities:
