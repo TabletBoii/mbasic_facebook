@@ -135,4 +135,6 @@ dmypy.json
 chromedriver
 
 src/facebook_autoregister/config/*
+.idea
+
 
